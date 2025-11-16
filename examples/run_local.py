@@ -1,10 +1,9 @@
 import json, asyncio
-from orchestration.d_orchestrator import DOrchestrator
-
+from orchestration.d_orchestrator import DSeriesOrchestrator
 async def main():
     with open("examples/example_task.json") as f:
         task = json.load(f)
-    orch = DOrchestrator()
+    orch = DSeriesOrchestrator()
     res = await orch.run(task)
     print(res)
 

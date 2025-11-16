@@ -1,0 +1,7 @@
+{
+  "task_id": "example_001",
+  "type": "enterprise_test",
+  "data": {
+    "input": "hello world"
+  }
+}

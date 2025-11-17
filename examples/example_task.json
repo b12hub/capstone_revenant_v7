@@ -1,7 +1,10 @@
 {
-  "task_id": "example_001",
-  "type": "enterprise_test",
+  "type": "enterprise_demo",
+  "task_id": "demo_001",
   "data": {
-    "input": "hello world"
-  }
+    "customer_id": 42,
+    "metrics": [1, 2, 3]
+  },
+  "requirements": ["enterprise_agent"],
+  "action": "analyze"
 }

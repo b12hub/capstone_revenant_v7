@@ -1,11 +1,9 @@
-import json, asyncio
-from orchestration.d_orchestrator import DSeriesOrchestrator
-async def main():
-    with open("examples/example_task.json") as f:
-        task = json.load(f)
-    orch = DSeriesOrchestrator()
-    res = await orch.run(task)
-    print(res)
+import os
+import json
+BASE = os.path.dirname(os.path.abspath(__file__))
+TASK_PATH = os.path.join(BASE, "example_task.json")
 
-if __name__ == "__main__":
-    asyncio.run(main())
+async def main():
+    with open(TASK_PATH) as f:
+        task = json.load(f)
+

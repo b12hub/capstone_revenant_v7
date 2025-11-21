@@ -1,0 +1,162 @@
+[
+  {
+    "ticket_id": "TCK-1001",
+    "subject": "URGENT: Account lockout after multiple failed MFA attempts",
+    "body": "User account locked after 5 consecutive failed MFA attempts from unrecognized device. Employee cannot access payroll system to process end-of-month payments. Last successful login was 2 hours ago from corporate IP.",
+    "customer_id": "CUST-021",
+    "label_intent": "account_lockout",
+    "label_severity": "high"
+  },
+  {
+    "ticket_id": "TCK-1002",
+    "subject": "CRITICAL: Complete database outage in us-east-1 region",
+    "body": "Primary production database cluster unresponsive. All application services returning 503 errors. Customer-facing applications completely down. Revenue impact estimated at $15k/hour. Issue began at 09:15 EST during routine maintenance window.",
+    "customer_id": "CUST-030",
+    "label_intent": "service_outage",
+    "label_severity": "critical"
+  },
+  {
+    "ticket_id": "TCK-1003",
+    "subject": "Billing discrepancy - duplicate charges on enterprise plan",
+    "body": "Monthly invoice shows duplicate line items for premium support. Charged $24,000 instead of $12,000. Accounting department requires resolution before month-end closing tomorrow.",
+    "customer_id": "CUST-022",
+    "label_intent": "billing_issue",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1004",
+    "subject": "VPN instability during peak business hours",
+    "body": "VPN connections dropping consistently between 9-11 AM daily. Remote employees cannot maintain stable connections for more than 10 minutes. Issue affects 45+ sales team members working from home.",
+    "customer_id": "CUST-104",
+    "label_intent": "vpn_issue",
+    "label_severity": "high"
+  },
+  {
+    "ticket_id": "TCK-1005",
+    "subject": "API gateway returning 502 Bad Gateway errors",
+    "body": "API gateway health checks failing. 40% of API requests returning 502 errors. Load balancer shows 3/5 backend instances unhealthy. Issue started after latest deployment (v2.8.1).",
+    "customer_id": "CUST-502",
+    "label_intent": "backend_error",
+    "label_severity": "high"
+  },
+  {
+    "ticket_id": "TCK-1006",
+    "subject": "File upload functionality broken in production",
+    "body": "Customer file uploader stuck at processing state. Files over 50MB fail with 'network error' message. Browser console shows CORS policy violations. Issue affects all new customer onboarding.",
+    "customer_id": "CUST-104",
+    "label_intent": "bug_report",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1007",
+    "subject": "SECURITY: Suspicious admin account activity detected",
+    "body": "Security monitoring flagged unusual login patterns for service admin account. Multiple authentication attempts from international IPs (Germany, Singapore). Account typically only accessed from corporate network.",
+    "customer_id": "CUST-078",
+    "label_intent": "security_incident",
+    "label_severity": "critical"
+  },
+  {
+    "ticket_id": "TCK-1008",
+    "subject": "Database connection pool exhaustion errors",
+    "body": "Application logs show 'Too many connections' errors during peak load. MySQL connection pool (max_connections=500) consistently hitting limit. Query performance degraded by 300%.",
+    "customer_id": "CUST-415",
+    "label_intent": "database_issue",
+    "label_severity": "high"
+  },
+  {
+    "ticket_id": "TCK-1009",
+    "subject": "Emergency MFA reset required - device lost",
+    "body": "Employee lost phone with Authenticator app. Needs immediate MFA reset to access production deployment systems for critical hotfix deployment scheduled in 2 hours.",
+    "customer_id": "CUST-156",
+    "label_intent": "access_request",
+    "label_severity": "high"
+  },
+  {
+    "ticket_id": "TCK-1010",
+    "subject": "SSL certificate renewal required - expires in 48 hours",
+    "body": "Monitoring alert: Wildcard SSL certificate for *.company.com expires 2025-11-22 08:00 UTC. Automatic renewal failed due to DNS validation issues. Urgent manual renewal required.",
+    "customer_id": "CUST-030",
+    "label_intent": "security_maintenance",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1011",
+    "subject": "Performance degradation in search functionality",
+    "body": "Customer reporting 3-4 second delays in product search results. Average response time increased from 250ms to 3200ms. Elasticsearch cluster showing high CPU utilization.",
+    "customer_id": "CUST-299",
+    "label_intent": "performance_issue",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1012",
+    "subject": "Data export missing recent transaction records",
+    "body": "Customer reporting CSV data exports missing all transactions from last 45 days. Export process completes successfully but output file contains incomplete data. Issue started after database migration last weekend.",
+    "customer_id": "CUST-422",
+    "label_intent": "data_issue",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1013",
+    "subject": "Mobile app crash on iOS 18.1 launch",
+    "body": "App crashes immediately on startup for all users updating to iOS 18.1. Crash analytics show memory access violation in payment processing module. Affecting 100% of iOS 18.1 users.",
+    "customer_id": "CUST-501",
+    "label_intent": "mobile_issue",
+    "label_severity": "high"
+  },
+  {
+    "ticket_id": "TCK-1014",
+    "subject": "Email delivery failures - high bounce rate",
+    "body": "Transactional email system showing 45% bounce rate for outgoing messages. DMARC authentication failures reported across multiple domains. Customer notification system impacted.",
+    "customer_id": "CUST-188",
+    "label_intent": "email_issue",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1015",
+    "subject": "Incorrect user permissions after team transfer",
+    "body": "User transferred from Marketing to Finance team but still has marketing-specific permissions. RBAC system not updating group membership automatically. User cannot access required financial reports.",
+    "customer_id": "CUST-267",
+    "label_intent": "permission_issue",
+    "label_severity": "low"
+  },
+  {
+    "ticket_id": "TCK-1016",
+    "subject": "CDN cache serving outdated JavaScript assets",
+    "body": "Static assets (main.js, styles.css) not updating globally after deployment. Some regions receiving 8-hour old cached versions despite multiple cache purge requests. Affecting new feature rollout.",
+    "customer_id": "CUST-030",
+    "label_intent": "cdn_issue",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1017",
+    "subject": "SOX compliance audit - user access logs required",
+    "body": "External auditors requesting complete user data access logs for Q3 2025. Need export of all authentication events, data queries, and permission changes for SOX compliance certification due in 5 business days.",
+    "customer_id": "CUST-415",
+    "label_intent": "compliance_request",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1018",
+    "subject": "Salesforce integration webhook timeouts",
+    "body": "Salesforce-to-CRM webhook integration timing out after 12 seconds. Payload processing exceeds timeout limit, causing lead synchronization failures. 350+ leads stuck in pending sync status.",
+    "customer_id": "CUST-322",
+    "label_intent": "integration_issue",
+    "label_severity": "medium"
+  },
+  {
+    "ticket_id": "TCK-1019",
+    "subject": "Memory leak in background job processors",
+    "body": "Worker nodes memory consumption growing 3GB/hour until out-of-memory killer terminates processes. Pattern matches image processing jobs. Requires restart every 6 hours to prevent cluster-wide impact.",
+    "customer_id": "CUST-501",
+    "label_intent": "infrastructure_issue",
+    "label_severity": "high"
+  },
+  {
+    "ticket_id": "TCK-1020",
+    "subject": "Feature request: Bulk user management API",
+    "body": "Requesting new REST API endpoints for bulk user operations. Currently limited to single-user operations in admin panel. Need endpoints for: bulk create, bulk update, bulk permission assignment to support enterprise onboarding workflows.",
+    "customer_id": "CUST-188",
+    "label_intent": "feature_request",
+    "label_severity": "low"
+  }
+]

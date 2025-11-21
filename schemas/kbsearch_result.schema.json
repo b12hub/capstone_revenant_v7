@@ -1,0 +1,30 @@
+{
+  "$id": "https://capstone.revenant/kbsearch_result.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KBSearchResult",
+  "type": "object",
+  "required": ["query","hits","total_matches","trace_id","timing_ms"],
+  "properties": {
+    "query": {"type":"string"},
+    "hits": {
+      "type": "array",
+      "items": {
+        "type":"object",
+        "required":["id","title","content","relevance_score","category"],
+        "properties": {
+          "id": {"type":"string"},
+          "title": {"type":"string"},
+          "content": {"type":"string"},
+          "relevance_score": {"type":"number", "minimum":0, "maximum":1},
+          "category": {"type":"string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "total_matches": {"type":"integer"},
+    "fallback_used": {"type":"boolean"},
+    "trace_id": {"type":"string"},
+    "timing_ms": {"type":"integer"}
+  },
+  "additionalProperties": false
+}

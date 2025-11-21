@@ -1,0 +1,22 @@
+{
+  "$id": "https://capstone.revenant/ingest_ticket.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IngestTicket",
+  "description": "Ticket object accepted by EnterpriseOrchestrator as pipeline input.",
+  "type": "object",
+  "required": ["ticket_id","subject","body","customer_id","priority","customer_tier"],
+  "properties": {
+    "ticket_id": {"type": "string", "description": "Unique ticket identifier"},
+    "subject": {"type": "string"},
+    "body": {"type": "string"},
+    "customer_id": {"type": "string"},
+    "customer_tier": {"type": "string", "enum": ["enterprise","premium","standard"]},
+    "priority": {"type": "string", "enum": ["low","medium","high","critical"]},
+    "sla_level": {"type": "string"},
+    "routing_tags": {"type": "array", "items": {"type": "string"}},
+    "attachments": {"type": "array", "items": {"type": "string"}},
+    "structured_context": {"type": "object"},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": false
+}

@@ -1,6 +1,6 @@
 import pytest
 import asyncio
-from agents.enterprise.enterprise_agent import EnterpriseAgent
+from agents.enterprise.enterprise_agent import EnterpriseOrchestratorAgent as EnterpriseAgent
 
 @pytest.mark.asyncio
 async def test_enterprise_agent():
